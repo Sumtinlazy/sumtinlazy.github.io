@@ -97,7 +97,7 @@ body {
 	font-size: 14px;
 	background: white;
 	padding-top: 22px;
-	background: url(img/background/backgroundimg);
+	background: url(img/background/backgroundimg.jpg);
 }
 
 .wrapper{
@@ -112,11 +112,12 @@ body {
 	margin-bottom: 18px;
 	padding-bottom: 18px;
 	border-bottom: 1px #ccc dashed;
+	color: white;
 }
 
 .page-title{
 	font-size: 40px;
-	color: #1f1f1f;
+	color: #B5B5B5;
 	margin-left: 10px;
 	margin-top: 130px;
 }
@@ -585,7 +586,7 @@ div.toggle-container .block p{
 #nav li ul li:hover a{ color: #fff; }
 
 
-/* SLIDESHOW ------------------------------------------------------------*/
+/* HOW ------------------------------------------------------------*/
 
 .wrapper-slideshow{
 	width: 975px;
