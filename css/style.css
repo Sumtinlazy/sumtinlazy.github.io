@@ -113,7 +113,6 @@ body {
 	margin-bottom: 18px;
 	padding-bottom: 18px;
 	border-bottom: 1px #ccc dashed;
-	color: white;
 }
 
 .page-title{
@@ -121,12 +120,14 @@ body {
 	color: #B5B5B5;
 	margin-left: 10px;
 	margin-top: 130px;
+	color: white;
 }
 	
 .page-subtitle{
 	font-size: 26px;
 	color: #555555;
 	margin-left: 10px;
+	color: #E3E5E6;
 }
 
 
