@@ -58,32 +58,44 @@
   </div>
   <!-- ENDS search -->
   <!-- wrapper -->
+  <div id="header"> <a href="index.html"><img src="img/logo.png" alt="" id="logo" /></a>
+  <!-- search -->
+  <div class="top-search">
+    <form  method="get" id="searchform" action="#">
+      <div>
+        <input type="text" value="Search..." name="s" id="s" onfocus="defaultInput(this)" onblur="clearInput(this)" />
+        <input type="submit" id="searchsubmit" value="" />
+      </div>
+    </form>
+  </div>
+  <!-- ENDS search -->
+  <!-- wrapper -->
   <div class="wrapper-header">
     <!-- navigation -->
     <ul id="nav" class="sf-menu">
       <li><a href="index.html">HOME</a></li>
       <li><a href="about.html">Dust 2</a>
         <ul>
-          <li><a href="about.html">Smokes/Flashes</a></li>
+            <li><a href="about.html">Smokes/Flashes</a></li>
           <li><a href="about-styled.html">Wallbangs/AWP Angles</a></li>
           <li><a href="about-more.html">Map Overview</a></li>
         </ul>
       </li>
-      <li  class="current_page_item"><a href="portfolio.html">Mirage</a>
+      <li><a href="portfolio.html">Mirage</a>
+        <ul>
+            <li><a href="about.html">Smokes/Flashes</a></li>
+          <li><a href="about-styled.html">Wallbangs/AWP Angles</a></li>
+          <li><a href="about-more.html">Map Overview</a></li>
+        </ul>
+      </li>
+      <li class="current_page_item"><a href="gallery.html">Cache</a>
         <ul>
           <li><a href="about.html">Smokes/Flashes</a></li>
           <li><a href="about-styled.html">Wallbangs/AWP Angles</a></li>
           <li><a href="about-more.html">Map Overview</a></li>
         </ul>
       </li>
-      <li><a href="gallery.html">Cache</a>
-        <ul>
-          <li><a href="about.html">Smokes/Flashes</a></li>
-          <li><a href="about-styled.html">Wallbangs/AWP Angles</a></li>
-          <li><a href="about-more.html">Map Overview</a></li>
-        </ul>
-      </li>
-      <li><a href="blog.html">Inferno</a>
+      <li ><a href="blog.html">Inferno</a>
         <ul>
           <li><a href="about.html">Smokes/Flashes</a></li>
           <li><a href="about-styled.html">Wallbangs/AWP Angles</a></li>
@@ -101,46 +113,89 @@
 <div id="main">
   <!-- page title -->
   <div class="page-title-holder">
-    <div class="page-title">GALLERY</div>
-    <div class="page-subtitle">FILTER YOUR CONTENT USING THE FILTER TAB</div>
+    <div class="page-title">MULTIPLE COLUMNS LAYOUT</div>
+    <div class="page-subtitle">HAVE ANY COMBINATION OF TEXT COLUMNS</div>
   </div>
   <!-- ENDS page title -->
-  <!-- filter -->
-  <ul id="portfolio-filter">
-    <li>FILTER </li>
-    <li><a href="#all">ALL</a></li>
-    <li><a href="#filter-autumn">AUTUMN</a></li>
-    <li><a href="#filter-winter">WINTER</a></li>
-    <li><a href="#filter-city">CITY</a></li>
-  </ul>
-  <!-- filter -->
   <!-- main-wrapper -->
   <div class="wrapper">
-    <!-- Thumbnails -->
-    <ul id="portfolio-list" class="gallery three-cols" >
-      <li class="filter-autumn"> <a href="img/dummies/autumn/1.jpg" rel="prettyPhoto[gallery]"> <span></span> <img src="img/dummies/autumn/3-cols/1.jpg" alt="" /></a> <em>The Road</em> </li>
-      <li class="filter-autumn"> <a href="img/dummies/autumn/2.jpg" rel="prettyPhoto[gallery]"> <span></span> <img src="img/dummies/autumn/3-cols/2.jpg" alt="" /></a> <em>Yellow Leaves</em> </li>
-      <li class="filter-autumn"> <a href="img/dummies/autumn/3.jpg" rel="prettyPhoto[gallery]"> <span></span> <img src="img/dummies/autumn/3-cols/3.jpg" alt="" /></a> <em>Abandoned Boat</em> </li>
-      <li class="filter-autumn"> <a href="img/dummies/autumn/4.jpg" rel="prettyPhoto[gallery]"> <span></span> <img src="img/dummies/autumn/3-cols/4.jpg" alt="" /></a> <em>Big Tree</em> </li>
-      <li class="filter-winter"> <a href="img/dummies/winter/1.jpg" rel="prettyPhoto[gallery]"> <span></span> <img src="img/dummies/winter/3-cols/1.jpg" alt="" /></a> <em>The Road</em> </li>
-      <li class="filter-winter"> <a href="img/dummies/winter/2.jpg" rel="prettyPhoto[gallery]"> <span></span> <img src="img/dummies/winter/3-cols/2.jpg" alt="" /></a> <em>Plant</em> </li>
-      <li class="filter-winter"> <a href="img/dummies/winter/3.jpg" rel="prettyPhoto[gallery]"> <span></span> <img src="img/dummies/winter/3-cols/3.jpg" alt="" /></a> <em>River</em> </li>
-      <li class="filter-winter"> <a href="img/dummies/winter/4.jpg" rel="prettyPhoto[gallery]"> <span></span> <img src="img/dummies/winter/3-cols/4.jpg" alt="" /></a> <em>Roots</em> </li>
-      <li class="filter-city"> <a href="img/dummies/city/1.jpg" rel="prettyPhoto[gallery]"> <span></span> <img src="img/dummies/city/3-cols/1.jpg" alt="" /></a> <em>The Boat</em> </li>
-      <li class="filter-city"> <a href="img/dummies/city/2.jpg" rel="prettyPhoto[gallery]"> <span></span> <img src="img/dummies/city/3-cols/2.jpg" alt="" /></a> <em>city</em> </li>
-      <li class="filter-city"> <a href="img/dummies/city/3.jpg" rel="prettyPhoto[gallery]"> <span></span> <img src="img/dummies/city/3-cols/3.jpg" alt="" /></a> <em>Crosswalk</em> </li>
-      <li class="filter-city"> <a href="img/dummies/city/4.jpg" rel="prettyPhoto[gallery]"> <span></span> <img src="img/dummies/city/3-cols/4.jpg" alt="" /></a> <em>Yellow</em> </li>
-    </ul>
-    <!-- ENDS Thumbnails -->
-    <!-- Pagination -->
-    <ul class='gallery-pager'>
-      <li><a href="#">prev</a></li>
-      <li class="active"><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">next</a></li>
-    </ul>
-    <!-- ENDS Pagination -->
+    <!-- page-content -->
+    <div class="page-content">
+      <!-- one col -->
+      <h4>SPECIAL CHARACTERS SUCH</h4>
+      <h5>&aacute; &eacute; &iacute; &oacute; &uacute; &#324; &#323; &Aacute; &Eacute; &Iacute; &Oacute; &Uacute; &eacute; &egrave; &agrave; &ccedil; &ugrave; &ocirc; &ucirc; &icirc; &ecirc; &acirc; &Ouml; &Ucirc; &yuml; &Uuml; &Otilde;</h5>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, are sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus.</p>
+      <div class="clear "></div>
+      <!-- ENDS one col -->
+      <!-- 2 cols -->
+      <div class="one-half">
+        <h4>TWO COLUMNS </h4>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugamet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vit, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus.</p>
+      </div>
+      <div class="one-half last">
+        <h4>TWO COLUMNS </h4>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugamet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vit, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus.</p>
+      </div>
+      <div class="clear "></div>
+      <!-- ENDS 2 cols -->
+      <!-- 3 cols -->
+      <div class="one-third">
+        <h4>THREE COLUMNS </h4>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus.</p>
+      </div>
+      <div class="one-third">
+        <h4>THREE COLUMNS </h4>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus.</p>
+      </div>
+      <div class="one-third last">
+        <h4>THREE COLUMNS </h4>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus.</p>
+      </div>
+      <div class="clear "></div>
+      <!-- ENDS 3 cols -->
+      <!-- 2/3 cols -->
+      <div class="one-third">
+        <h4>ONE THIRD COLUMN</h4>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus.</p>
+      </div>
+      <div class="two-third last">
+        <h4>TWO THIRD COLUMNS </h4>
+        <p>Pellentesque vit habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat Aenean fermentum, it sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. vit Aenean fermentum, Aenean fermentum, Aenean fermentum, Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus.</p>
+      </div>
+      <div class="clear "></div>
+      <!-- ENDS 2/3 cols -->
+      <!-- 4 cols -->
+      <div class="one-fourth">
+        <h4>FOUR COLUMNS </h4>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor qenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis.</p>
+      </div>
+      <div class="one-fourth">
+        <h4>FOUR COLUMNS </h4>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor qenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis.</p>
+      </div>
+      <div class="one-fourth">
+        <h4>FOUR COLUMNS </h4>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor qenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis.</p>
+      </div>
+      <div class="one-fourth last">
+        <h4>FOUR COLUMNS </h4>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor qenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis.</p>
+      </div>
+      <div class="clear "></div>
+      <!-- ENDS 4 cols -->
+      <!-- 1/4-3/4 cols -->
+      <div class="one-fourth">
+        <h4>ONE FOURTH</h4>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, sit amet, ante. Donec eu libero sit amet quam egestas semper. </p>
+      </div>
+      <div class="three-fourth last">
+        <h4>THREE FOURTH COLUMNS </h4>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus.</p>
+      </div>
+      <div class="clear"></div>
+      <!-- ENDS 1/4-3/4 cols -->
+    </div>
+    <!-- ENDS page content -->
   </div>
   <!-- ENDS main-wrapper -->
   <!-- twitter -->
@@ -148,7 +203,7 @@
     <div id="twitter-holder">
       <ul>
         <li>
-          <div class="twitter-entry">&quot;Vestibulum tortor quam, feugiat vitae, ultricies eget, <a href="#">domain.com</a>&quot; <span class="twitter-time">about 11 hours ago</span></div>
+          <div class="twitter-entry">&quot;Welcome to our site!, <a href="#">CSGOMapGuides.com</a>&quot; <span class="twitter-time">about 11 hours ago</span></div>
         </li>
       </ul>
     </div>
