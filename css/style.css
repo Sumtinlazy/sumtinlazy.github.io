@@ -109,10 +109,10 @@ body {
 
 .page-title-holder{
 	width: 100%;
-	padding-top: -100px;
 	margin-bottom: 18px;
 	padding-bottom: 18px;
 	border-bottom: 1px #ccc dashed;
+	background-image: url(../img/Mapicons/D2Banner.jpg);
 }
 
 .page-title{
@@ -333,7 +333,21 @@ form#searchform input#searchsubmit:hover{
 	background-position: -137px -92px;
 }
 
+/* Callouts */
+
+.Smoke-Header {
+	border: #FFD83B 10px;]
+	background-color: #FFD83B;
+}
+.smoke-flash {
+	font-size: 20px;
+}
+
 /* STYLED ------------------------------------------------------------*/
+
+.Titlez {
+	color: white;
+}
 
 img.left-align{
 	float:left;
