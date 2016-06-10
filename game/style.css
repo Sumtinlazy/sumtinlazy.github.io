@@ -1,0 +1,77 @@
+    body {
+	font-family: monospace;
+}
+
+/*Stuff below governs the start screen*/
+
+#gameover {
+    width: 90px;
+    height: 40px;
+    background-color: #C40000;
+    text-align: center;
+}
+
+.titleContent {
+    margin: 10% auto;
+    text-align: center;
+}
+
+.splashTitle {
+    color: #fff;
+    font-size: 5em;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(27, 25, 25, 0.74);
+}
+
+.button {
+    border: 5px solid #383838;
+    color: #383838;
+    font-size: 8em;
+    text-decoration: none;
+    background-color: #abc;
+    box-shadow: 15px 15px 80px #555;
+}
+  a.button:hover {
+    background-color: #383838;
+    color: #abc;
+  }
+
+#score {
+    width: 190px;
+    height: 490px;
+    background-color: grey;
+    float: left;
+    border-style: outset;
+    border-width: 5px;
+    border-color: black;
+}
+
+#ctx {
+    float: left;
+}
+
+#scoreholder {
+    width: 50px;
+    height: 20px;
+}
+
+#gameover {
+    width: 100px;
+    height: 50px;
+    background-color: #C40000;
+    text-align: center;
+    float: left;
+}
+
+.restart {
+    border: 5px solid #383838;
+    color: #383838;
+    text-decoration: none;
+    background-color: #abc;
+    box-shadow: 15px 15px 80px #555;
+}
+
+  a.restart:hover {
+    background-color: #383838;
+    color: #abc;
+  }

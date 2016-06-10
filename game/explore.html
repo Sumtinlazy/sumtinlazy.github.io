@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Run Away From The Red Blocks</title>
+
+<script src="jquery-1.11.3.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!--link jQuery UI here if you need it !-->
+<script src="gamedev.js"></script>
+</head>
+
+<body id="exploreBody">
+
+<!--Your code goes here !-->
+
+<canvas id="ctx" width="500" height="500" style="border:1px solid #000000;"></canvas>
+
+<script> 
+var ctx = document.getElementById("ctx").getContext("2d"); 
+ctx.font = '30px Arial';
+
+var HEIGHT = 500;
+var WIDTH = 500;
+var timeWhenGameStarted = Date.now();	//return time in ms
+
+var player = {
+	x:50,
+	spdX:30,
+	y:40,
+	spdY:5,
+	name:'P',
+	hp:10,
+	color: 'green',
+	width: 20,
+	height: 20
+};
+
+var enemyList = {};
+
+
+getDistanceBetweenEntity = function (entity1,entity2){	//return distance (number)
+	var vx = entity1.x - entity2.x;
+	var vy = entity1.y - entity2.y;
+	return Math.sqrt(vx*vx+vy*vy);
+};
+
+testCollisionEntity = function (entity1,entity2){       //return if colliding (true/false)
+        var rect1 = {
+                x:entity1.x-entity1.width/2,
+                y:entity1.y-entity1.height/2,
+                width:entity1.width,
+                height:entity1.height
+        };
+        var rect2 = {
+                x:entity2.x-entity2.width/2,
+                y:entity2.y-entity2.height/2,
+                width:entity2.width,
+                height:entity2.height
+        };
+        return testCollisionRectRect(rect1,rect2);
+       
+};
+
+testCollisionEntity = function (entity1,entity2){	//return if colliding (true/false)
+	var distance = getDistanceBetweenEntity(entity1,entity2);
+	return distance < 30;
+};
+
+Enemy = function (id,x,y,spdX,spdY, width, height, color){
+	var enemy3 = {
+		x:x,
+		spdX:spdX,
+		y:y,
+		spdY:spdY,
+		name:'E',
+		id:id,
+		width:width,
+		height:height,
+		color: 'red'
+	};
+	enemyList[id] = enemy3;
+	
+};
+
+document.onmousemove = function(mouse){
+   	var mouseX = mouse.clientX - document.getElementById('ctx').getBoundingClientRect().left;
+    var mouseY = mouse.clientY - document.getElementById('ctx').getBoundingClientRect().top;
+
+	if(mouseX<player.width/2) {
+		mouseX = player.width/2;
+	}
+	if(mouseX>WIDTH-player.width/2) {
+		mouseX= WIDTH - player.width/2;
+	}
+	if(mouseY<player.height/2) {
+		mouseY = player.height/2;
+	}
+	if(mouseY>HEIGHT - player.height/2) {
+		mouseY=HEIGHT - player.height/2;
+	}
+	
+	player.x = mouseX-8;
+	player.y = mouseY-8;
+};
+
+
+
+
+
+updateEntity = function (something){
+	updateEntityPosition(something);
+	drawEntity(something);
+};
+updateEntityPosition = function(something){
+	something.x += something.spdX;
+	something.y += something.spdY;
+			
+	if(something.x < 0 || something.x > WIDTH){
+		something.spdX = -something.spdX;
+	}
+	if(something.y < 0 || something.y > HEIGHT){
+		something.spdY = -something.spdY;
+	}
+};
+
+
+drawEntity = function(something){
+	ctx.fillStyle = something.color;
+	ctx.fillRect(something.x-something.width/2,something.y-something.height/2, something.width, something.height);
+	ctx.fillStyle = 'black';
+};
+
+var lock = 0;
+
+update = function(){
+	ctx.clearRect(0,0,WIDTH,HEIGHT);
+	
+	for(var key in enemyList){
+		updateEntity(enemyList[key]);
+		
+		var isColliding = testCollisionEntity(player,enemyList[key]);
+		if(isColliding){
+			player.hp = player.hp - 1;
+			if(player.hp <= 0){
+				var timeSurvived = Date.now() - timeWhenGameStarted;
+				
+				timeWhenGameStarted = Date.now();
+				player.hp = 0;
+				$('#score').css({"background-color":"red"});
+				$('.finish').show();
+				if(lock === 0){
+					$('#time').html("You survived for " + score*multiplier + "s.")
+				};
+				lock = 1;
+			}
+		}
+		
+	}
+	
+	drawEntity(player);
+	ctx.fillText(player.hp + " Hp",0,30);
+};
+
+Enemy('E1',150,350,10,15,30,30);
+Enemy('E2',250,350,10,-15,20,15);
+Enemy('E3',250,150,10,-8,10,30);
+
+
+setInterval(update,40);
+setInterval(scoreUpdate, 1000)
+
+var multiplier = 3;
+
+function scoreUpdate() {
+	if(player.hp > 0){
+		score = score + multiplier;
+	}
+	$("#scoreholder").html(score);
+}
+
+var score = 0;
+
+</script>
+
+<div id="score">Score: 
+	<span id="scoreholder">0</span>
+	<span id="timeLasted"></span>
+	<div class="finish"> 
+		<div class="finish">
+			<span class="finish" id="time"></span>
+		</div>
+	</div>
+	<div id="gameover" class="finish restart">
+		<a id="start"  href="index.html">Restart</a>
+	</div>
+</div>
+
+
